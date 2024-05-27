@@ -7,7 +7,7 @@ export default function ExpenseList() {
     const { state } = useBudget()
     const filterExpenses = state.currentCategory ? state.expenses.filter( expense => expense.category === state.currentCategory) : state.expenses
 
-    const isEmpty = useMemo(() => filterExpenses.length === 0, [state.expenses] )
+    const isEmpty = useMemo(() => filterExpenses.length === 0, [filterExpenses] )
 
 
     return (
